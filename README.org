@@ -1,0 +1,9 @@
+#+TITLE: Algorithms 
+#+AUTHOR: Sidharth ARya
+#+DESCRIPTION: This are my solutions to different algorithm books.#+TOC: nil
+#+OPTIONS: toc:nil
+# Algorithms Solutions
+* Algorithms Solutions
+This are my solutions to different algorithm books.#+TOC: nil
+
+#+TOC: headlines

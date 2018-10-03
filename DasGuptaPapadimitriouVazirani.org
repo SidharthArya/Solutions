@@ -1,0 +1,5 @@
+#+TITLE: Solution Manual For Algorithms by Das Gupta Papadimitriou and Vazirani
+#+AUTHOR: Sidharth Arya
+
+* Prologue
+
