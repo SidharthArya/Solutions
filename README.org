@@ -4,6 +4,7 @@
 #+OPTIONS: toc:nil
 # Algorithms Solutions
 * Algorithms Solutions
-This are my solutions to different algorithm books.#+TOC: nil
+This are my solutions to different algorithm books.
 
 #+TOC: headlines
+* Algorithms, Das Gupta Papadimitriou Vazirani

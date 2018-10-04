@@ -1,5 +1,34 @@
 #+TITLE: Solution Manual For Algorithms by Das Gupta Papadimitriou and Vazirani
 #+AUTHOR: Sidharth Arya
-
+#+LATEX_CLASS: some
+#+LATEX: \frontmatter
+#+OPTIONS: toc:nil
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="commons/org/css/style.css"/>
+#+TOC: headlines 0
 * Prologue
-
+**    
+   - f = \theta(g)
+   - f = O(g)
+   - f = \theta(g)
+   - f = 
+    #+LATEX:\mainmatter
+* Okay
+#+LATEX: \backmatter
+* Code
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'org-latex-classes
+             '("some"
+               "\\documentclass{book}"
+               ("\\chapter{%s}" . "\\chapter*{%s}")
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+(add-to-list 'org-latex-classes
+          '("koma-article"
+             "\\documentclass{scrartcl}"
+             ("\\section{%s}" . "\\section*{%s}")
+             ("\\subsection{%s}" . "\\subsection*{%s}")
+             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+             ("\\paragraph{%s}" . "\\paragraph*{%s}")
+             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+#+END_SRC

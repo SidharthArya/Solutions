@@ -1,0 +1,64 @@
+% Created 2018-10-04 Thu 19:37
+% Intended LaTeX compiler: pdflatex
+\documentclass{book}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Sidharth Arya}
+\date{\today}
+\title{Solution Manual For Algorithms by Das Gupta Papadimitriou and Vazirani}
+\hypersetup{
+ pdfauthor={Sidharth Arya},
+ pdftitle={Solution Manual For Algorithms by Das Gupta Papadimitriou and Vazirani},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.0.50 (Org mode 9.1.14)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\frontmatter
+\setcounter{tocdepth}{0}
+\tableofcontents
+\chapter{Prologue}
+\label{sec:orgdfe432b}
+\section{}
+\label{sec:orga150654}
+\begin{enumerate} [label=\alph*]
+\item abc
+\mainmatter
+\end{enumerate}
+\chapter{Okay}
+\label{sec:org0ab7c40}
+\backmatter
+\chapter{Code}
+\label{sec:orge7c152c}
+\begin{verbatim}
+(add-to-list 'org-latex-classes
+             '("some"
+               "\\documentclass{book}"
+               ("\\chapter{%s}" . "\\chapter*{%s}")
+               ("\\section{%s}" . "\\section*{%s}")
+               ("\\subsection{%s}" . "\\subsection*{%s}")
+               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
+(add-to-list 'org-latex-classes
+          '("koma-article"
+             "\\documentclass{scrartcl}"
+             ("\\section{%s}" . "\\section*{%s}")
+             ("\\subsection{%s}" . "\\subsection*{%s}")
+             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+             ("\\paragraph{%s}" . "\\paragraph*{%s}")
+             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+\end{verbatim}
+\end{document}
