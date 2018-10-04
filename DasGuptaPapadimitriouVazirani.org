@@ -3,7 +3,7 @@
 #+LATEX_CLASS: some
 #+LATEX: \frontmatter
 #+OPTIONS: toc:nil
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="commons/org/css/style.css"/>
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style.css"/>
 #+TOC: headlines 0
 * Prologue
 **    

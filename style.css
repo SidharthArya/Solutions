@@ -1,0 +1,37 @@
+html{
+    font-family: monospace;
+    font-size:10px;
+}
+body
+{
+    font-size:1.6rem;
+    max-width:967px;
+    margin: 0 auto;
+}
+h1.title
+{
+    background-image: linear-gradient(#f12345, #12345f);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip:text;
+}
+h2{
+    text-align: left;
+    color: #f12345;
+}
+h3{
+    color: #12345f;
+    
+}
+p.author{
+    font-weight:bold;
+}
+#postamble{
+    background:#555;
+    color:#fff;
+    text-align:center;
+}
+pre.src{
+    border-radius:1em;
+
+}

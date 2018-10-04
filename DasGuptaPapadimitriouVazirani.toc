@@ -1,4 +1,0 @@
-\contentsline {chapter}{Prologue}{iii}{chapter*.2}
-\contentsline {section}{\numberline {0.1}}{iii}{section.0.1}
-\contentsline {chapter}{Okay}{1}{chapter*.3}
-\contentsline {chapter}{Code}{3}{chapter*.4}
