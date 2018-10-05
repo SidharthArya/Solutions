@@ -6,7 +6,6 @@
 * Algorithms Solutions
 This are my solutions to different algorithm books.
 
-#+TOC: headlines
 * Algorithms, Das Gupta Papadimitriou Vazirani 
-** html - https://rawgit.com/sidhartharya10/Algorithms/master/DasGuptaPapadimitriouVazirani.html
-** pdf - https://rawgit.com/sidhartharya10/Algorithms/master/DasGuptaPapadimitriouVazirani.pdf
+1. html - https://rawgit.com/sidhartharya10/Solutions/master/DasGuptaPapadimitriouVazirani.html
+2. pdf - https://rawgit.com/sidhartharya10/Solutions/master/DasGuptaPapadimitriouVazirani.pdf

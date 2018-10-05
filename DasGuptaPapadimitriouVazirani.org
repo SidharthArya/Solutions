@@ -1,5 +1,5 @@
 #+TITLE: Solution Manual For Algorithms by Das Gupta Papadimitriou and Vazirani
-#+AUTHOR: Sidharth Arya
+#+AUTHOR: Sidharth Arya 
 #+LATEX_CLASS: some
 #+LATEX: \frontmatter
 #+OPTIONS: toc:nil
