@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-10-04 Thu 20:43 -->
+<!-- 2018-10-05 Fri 20:49 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Solution Manual For Algorithms by Das Gupta Papadimitriou and Vazirani</title>
@@ -227,35 +227,602 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
 <h1 class="title">Solution Manual For Algorithms by Das Gupta Papadimitriou and Vazirani</h1>
-<div id="outline-container-org5b43635" class="outline-2">
-<h2 id="org5b43635"><span class="section-number-2">1</span> Prologue</h2>
+<div id="outline-container-org84d4b20" class="outline-2">
+<h2 id="org84d4b20"><span class="section-number-2">1</span> Prologue</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orga5f0f6f" class="outline-3">
-<h3 id="orga5f0f6f"><span class="section-number-3">1.1</span> </h3>
+<div id="outline-container-org94f2abb" class="outline-3">
+<h3 id="org94f2abb"><span class="section-number-3">1.1</span> </h3>
 <div class="outline-text-3" id="text-1-1">
 <ul class="org-ul">
-<li>f = &theta;(g)</li>
-<li>f = O(g)</li>
-<li>f = &theta;(g)</li>
-<li><p>
-f = 
-</p></li>
+<li>f = &Theta;(g)</li>
 </ul>
+
+<p>
+Since <code>n-100</code> and <code>n-200</code> have the same power of n.
+</p>
+<ul class="org-ul">
+<li>f = O(g)</li>
+</ul>
+
+<p>
+Since n<sup>1/2</sup> is smaller than n<sup>2/3</sup>
+</p>
+<ul class="org-ul">
+<li>f = &Theta;(g)</li>
+</ul>
+
+<p>
+Since <code>log n</code> can always be overcome by <code>n</code> above a particular <code>n</code>,  and so can it be less than <code>log n</code> below a particular <code>n</code>. 
+</p>
+<ul class="org-ul">
+<li>f = &Theta;(g)</li>
+</ul>
+
+<p>
+Since 
+</p>
+<div class="EQUATION">
+<p>
+10n log 10n 
+= 10n(log 10 + log n)
+= 10n log 10 + 10n log n
+= &theta; (nlogn)
+</p>
+
+</div>
+<ul class="org-ul">
+<li>f = &Theta;(g)</li>
+</ul>
+
+<p>
+Since log 2n = log 2 + log n and log 3n = log 3 + log n. which makes log 2 and log 3, just constants.
+</p>
+<ul class="org-ul">
+<li>f = &Theta; (g)</li>
+</ul>
+
+<p>
+Since log n<sup>2</sup> = 2log n. and 2 is just a constant that can be dropped.
+</p>
+<ul class="org-ul">
+<li>f = &Omega;(g)</li>
+</ul>
+
+<p>
+Since power greater than 0 can always overtake log at some point
+</p>
+<ul class="org-ul">
+<li>f = &Omega;(g)</li>
+</ul>
+
+<p>
+On comparing n<sup>2</sup> is greater than n, and log's are not that signifincant in comparison.
+</p>
+<ul class="org-ul">
+<li>f = &Omega;(g)</li>
+</ul>
+
+<p>
+Since power greater than 0 can always overtake log at some point
+</p>
+<ul class="org-ul">
+<li>f = &Omega;(g)</li>
+</ul>
+
+<p>
+Since (log n)<sup>(log n) -1</sup> is greater than n for some value of n.
+</p>
+<div class="EQUATION">
+<p>
+Let us simplify equation for better comparison. We can multiply the equations by log n
+</p>
+
+<p>
+Giving
+</p>
+
+<p>
+f'(x) = (log n)<sup>(log n) + 1</sup>
+</p>
+
+<p>
+g'(x) =  n
+</p>
+
+<p>
+I am using ' since equations have been altered and not the same as they initially were, yet they are still comparable.
+</p>
+
+<p>
+now applying log
+</p>
+
+<p>
+f''(x) = (1+log n) log (log n)
+</p>
+
+<p>
+g''(x) = log n
+</p>
+
+<p>
+It is clear that it may not be possible to draw a direct relation. But f''(x) can be written as:
+</p>
+
+<p>
+f''(x) = (1 + g''(x)) log (g''(x))
+</p>
+
+<p>
+Now, if we visualize, log g''(x) will produce 1 at some point and will keep increasing after that value, and at that point it is multiplied by 1+ g''(x) which will clearly compound to something greater than g''(x) itself.
+</p>
+
+<p>
+Therefore, at some point f(x) will overtake g(x)
+</p>
+
+</div>
+<ul class="org-ul">
+<li>f = &Omega;(g)</li>
+</ul>
+
+<p>
+Since power greater than 0 can always overtake log at some point
+</p>
+<ul class="org-ul">
+<li>f = O(g)</li>
+</ul>
+
+<div class="EQUATION">
+<p>
+5<sup>log<sub>2</sub> n</sup> = 5<sup>log<sub>2</sub> n x log<sub>5</sub> 5</sup> = 5<sup>log<sub>5</sub> n x log<sub>2</sub> 5</sup> = (5<sup>log<sub>5</sub> n</sup>)<sup>log<sub>2</sub> 5</sup> = n<sup>log<sub>2</sub> 5</sup> &asymp; n<sup>2.something</sup>
+</p>
+
+</div>
+
+<p>
+Therefore, at some n g will overcome f, by comparison of powers.
+</p>
+<ul class="org-ul">
+<li>f = &Omega;(g)</li>
+</ul>
+
+<p>
+Since n2<sup>n</sup> will produce a greater value for n than 3<sup>n</sup> at some point.
+</p>
+<ul class="org-ul">
+<li>f = &Theta;(g)</li>
+</ul>
+
+<p>
+Since the two differ by a constant multiplicative factor, i.e. 2.
+</p>
+<ul class="org-ul">
+<li>f = &Theta;(g)</li>
+</ul>
+
+<div class="EQUATION">
+<p>
+Expansion of n!
+</p>
+
+<p>
+n! = n(n-1)(n-2)..1
+</p>
+
+<p>
+Notice that largest possible power of n will be n. if we count unity as (n-something)
+</p>
+
+<p>
+Therefore n! can be dependent on n<sup>n</sup>
+</p>
+
+<p>
+and so n<sup>n</sup> at some point will definetely overcome 2<sup>n</sup>.
+</p>
+
+<p>
+n! grows atleast as fast as 2<sup>n</sup>, maybe more, but our concern is satisfied.
+</p>
+
+</div>
+<ul class="org-ul">
+<li>f=O(g)</li>
+</ul>
+<div class="EQUATION">
+<p>
+Taking log on both equations, and comparing
+</p>
+
+<p>
+f'(x) = log n x log(log n)
+</p>
+
+<p>
+g'(x) = (log<sub>2</sub> n)<sup>2</sup> x log 2 = log 2 x (log<sub>2</sub> e)<sup>2</sup> x log n x log n
+</p>
+
+<p>
+Comparing the n-dependent terms, log n is certainly greater than log(log n). Therefore, g'(x) will be greater than f'(x) at some point.
+</p>
+
 </div>
 </div>
 </div>
-<div id="outline-container-orgb0d0078" class="outline-2">
-<h2 id="orgb0d0078"><span class="section-number-2">2</span> Okay</h2>
+<div id="outline-container-org2e27a9b" class="outline-3">
+<h3 id="org2e27a9b"><span class="section-number-3">1.2</span> </h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+g(n) = 1 + c + c<sup>2</sup> &#x2026; + c<sup>n</sup>
+</p>
+<ul class="org-ul">
+<li>if c &lt; 1</li>
+</ul>
+
+<p>
+The series will be decreasing. so the maximum number will be 1. Therefore, g(n) be independent of n, on approximation, implying g(n) = &Theta;(1).
+</p>
+<ul class="org-ul">
+<li>if c = 1</li>
+</ul>
+
+<p>
+g(n) = 1 + 1 +1 +&#x2026; + 1 = n
+</p>
+
+<p>
+Therefore, g(n) = &Theta;(n)
+</p>
+<ul class="org-ul">
+<li>if c&gt; 1</li>
+</ul>
+
+<p>
+g(n) will be increasing. The largest term will be c<sup>n</sup>
+</p>
+
+<p>
+Therefore, g(n) = &Theta;(c<sup>n</sup>)
+</p>
+</div>
+</div>
+<div id="outline-container-org1fcd0d9" class="outline-3">
+<h3 id="org1fcd0d9"><span class="section-number-3">1.3</span> </h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li></li>
+</ul>
+<div class="EQUATION">
+<p>
+F<sub>n</sub> &ge; 2<sup>0.5n</sup> for n &ge; 6
+</p>
+
+<p>
+<b>Induction</b>
+</p>
+
+<p>
+Case : n = 6 (Base Case)
+</p>
+
+<p>
+F<sub>0</sub> = 0, F<sub>1</sub> = 1 , F<sub>2</sub> = 1, F<sub>3</sub> = 2, F<sub>4</sub> = 3, F<sub>5</sub> = 5
+</p>
+
+<p>
+L.H.S : F<sub>6</sub> = F<sub>5</sub> + F<sub>4</sub> = 8
+</p>
+
+<p>
+R.H.S : 2<sup>0.5 x 6</sup> = 8
+</p>
+
+<p>
+Since L.H.S = R.H.S
+</p>
+
+<p>
+This case is true.
+</p>
+
+<p>
+Let it be true, for n = k.
+</p>
+
+<p>
+F<sub>k</sub> = F<sub>k-1</sub>+ F<sub>k-2</sub> &ge; 2<sup>0.5 x k</sup>
+</p>
+
+<p>
+Case: n = k+1
+</p>
+
+<p>
+F<sub>k+1</sub> = F<sub>k</sub> + F<sub>k-1</sub> &ge; 2<sup>0.5 x k</sup> + 2<sup>0.5 x k-1</sup>  = 2<sup>0.5 k</sup> (1+2<sup>-0.5</sup>) 
+</p>
+
+<p>
+It can easily be shown that 1+ 2<sup>-0.5</sup> &gt; 2<sup>0.5</sup>
+</p>
+
+<p>
+Subsituting that instead
+F<sub>k+1</sub> &ge; 2<sup>0.5(k+1)</sup>
+</p>
+
+</div>
+<ul class="org-ul">
+<li></li>
+</ul>
+<div class="EQUATION">
+<p>
+We need to solve for c such that:
+</p>
+
+<p>
+F<sub>n</sub> &le; 2<sup>cm</sup> &forall; n &ge; 6
+</p>
+
+<p>
+&rArr; F<sub>n-1</sub> + F<sub>n-2</sub> &le; 2<sup>cn</sup>
+</p>
+
+<p>
+&rArr; 2<sup>c(n-1)</sup> + 2<sup>c(n-2)</sup> &le; 2<sup>cn</sup>
+</p>
+
+<p>
+&rArr; 2<sup>c(n-2)</sup> (2<sup>c</sup> + 1) &le; 2<sup>cn</sup>
+</p>
+
+<p>
+&rArr; 2<sup>c</sup> +1  &le; 2<sup>2c</sup>
+</p>
+
+<p>
+Let 2<sup>c</sup> =x
+</p>
+
+<p>
+&rArr; x +1 &le; x<sup>2</sup>
+</p>
+
+<p>
+&rArr; x<sup>2</sup> - x - 1 &ge; 0
+</p>
+
+<p>
+2<sup>c</sup> &ge; \(\frac{1 \pm \sqrt{5}}{2}\) 
+</p>
+
+<p>
+Taking log
+</p>
+
+<p>
+&rArr; c  &ge; log<sub>2</sub> (1 &plusmn; \(\sqrt{5}\)) - 1
+</p>
+
+<p>
+c &asymp; 1.694
+</p>
+
+</div>
+
+<ul class="org-ul">
+<li></li>
+</ul>
+<p>
+From previous example . c = 1.694
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc9b8cc0" class="outline-3">
+<h3 id="orgc9b8cc0"><span class="section-number-3">1.4</span> </h3>
+<div class="outline-text-3" id="text-1-4">
+<ul class="org-ul">
+<li>Basic Matrix multiplication</li>
+<li>If we attribute all multiplicative and additive operations as O(1), then,
+If we have to compute fibonnacci of, say 9.
+We already know the value of matrix X. So to find value of fibonnacci 9, we need to know X<sup>9</sup>, which can be written as X<sup>8</sup> x X. Since we already know the value of X. All we have to do is compute X<sup>2</sup> = X x X and X<sup>4</sup> = X*2 x X<sup>2</sup> and X<sup>8</sup> = X<sup>4</sup> x X<sup>4</sup>, which gives us a total of 3 matrix multiplication operations. for n = 9.</li>
+</ul>
+<p>
+And for n = 8 it would be the same. Since log 8 is 3, so there are 3 matrix multiplication. which concludes the answer.
+</p>
+<ul class="org-ul">
+<li>It's an obvious statement, since even the final answer will not be n bits long.</li>
+</ul>
+<p>
+let's say we start with 0, 1, 1. The third fibonnacci number in binary will be 10.  compare them with n= 0, 1,2,3. Just for sake of argument let's use induction.
+</p>
+<div class="EQUATION">
+<p>
+<b>Induction</b>
+</p>
+
+<p>
+for n = 1 (Base Case)
+</p>
+
+<p>
+F<sub>1</sub> = 1
+</p>
+
+<p>
+also in binary only one bit is needed. Base Case is satisfied.
+</p>
+
+<p>
+let's assume it to be true for n=k
+</p>
+
+<p>
+then 
+</p>
+
+<p>
+F<sub>k+1</sub> = F<sub>k</sub> + F<sub>k-1</sub>
+</p>
+
+<p>
+We know that binary F<sub>k</sub> = O(k) and binary F<sub>k-1</sub> = O(k-1)
+</p>
+
+<p>
+It is already known that the maximum of n digit number on addition with itself will have n+1 digits.
+</p>
+
+<p>
+e.g
+</p>
+
+<p>
+1111111 + 1111111 = 11111110
+</p>
+
+<p>
+Therefore k-digit binary number + k-1 digit binary number cannot produce more digits than k+1&#x2026;
+</p>
+
+<p>
+Hence the statement is true for all fibonnacci numbers.
+</p>
+
+</div>
+<ul class="org-ul">
+<li>Since log n matrix multiplications are required, each compounding to 8 matrix multiplications. Running time will be nearly O(8M(n) log n) = O(M(n) log n)</li>
+<li>Basically as we raise the power of the matrices, the length increases (doubles). Therefore</li>
+</ul>
+<p>
+M(1) + M(2) + M(4)&#x2026; + M(n-1) = O(M(n))
+Since the terms have some dependence on n (e.g. M(n-1)). 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org39142c6" class="outline-3">
+<h3 id="org39142c6"><span class="section-number-3">1.5</span> Extra</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-org8ae5f29" class="outline-4">
+<h4 id="org8ae5f29"><span class="section-number-4">1.5.1</span> Fibonnaci 1: By Recursion</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #fe8019;">#include</span><span style="color: #b8bb26;">&lt;stdio.h&gt;</span>
+
+<span style="color: #d3869b;">int</span> <span style="color: #fabd2f;">fib</span>(<span style="color: #d3869b;">int</span> <span style="color: #83a598;">n</span>)
+{
+  <span style="color: #fb4933;">if</span>(n == 0) <span style="color: #fb4933;">return</span> 0 ;
+  <span style="color: #fb4933;">if</span>(n == 1) <span style="color: #fb4933;">return</span> 1;
+  <span style="color: #fb4933;">else</span> <span style="color: #fb4933;">return</span> fib(n-1) + fib(n-2);  
+}
+<span style="color: #d3869b;">int</span> <span style="color: #fabd2f;">main</span>()
+{
+  printf(<span style="color: #b8bb26;">"%d"</span>, fib(40));
+   <span style="color: #fb4933;">return</span> 0;
+}
+</pre>
+</div>
+<p>
+Time: 0m1.143s
+Note: if you have a linux machine, you can check the time on your machine by <code>time output-file</code>. but the time will be different on your machine.
+</p>
+</div>
+</div>
+<div id="outline-container-org08299a9" class="outline-4">
+<h4 id="org08299a9"><span class="section-number-4">1.5.2</span> Fibonnaci 1: By Loop</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #fe8019;">#include</span><span style="color: #b8bb26;">&lt;stdio.h&gt;</span>
+
+<span style="color: #d3869b;">int</span> <span style="color: #fabd2f;">fib</span>(<span style="color: #d3869b;">int</span> <span style="color: #83a598;">n</span>)
+{
+  <span style="color: #fb4933;">if</span>(n == 0) <span style="color: #fb4933;">return</span> 0 ;
+  <span style="color: #fb4933;">if</span>(n == 1) <span style="color: #fb4933;">return</span> 1;
+  <span style="color: #d3869b;">int</span> <span style="color: #83a598;">Arr</span>[n];
+  Arr[0] = 0; Arr[1] = 1;
+  <span style="color: #fb4933;">for</span>(<span style="color: #d3869b;">int</span> <span style="color: #83a598;">i</span> = 2 ; i &lt; n; i++)
+    Arr[i] = Arr[i-1] + Arr[i-2];
+  <span style="color: #fb4933;">return</span> Arr[n-1] + Arr[n-2];
+}
+<span style="color: #d3869b;">int</span> <span style="color: #fabd2f;">main</span>()
+{
+  printf(<span style="color: #b8bb26;">"%d"</span>, fib(40));
+   <span style="color: #fb4933;">return</span> 0;
+}
+</pre>
+</div>
+<p>
+Time: 0m0.002s
+</p>
+</div>
+</div>
+<div id="outline-container-org488cce6" class="outline-4">
+<h4 id="org488cce6"><span class="section-number-4">1.5.3</span> Fibonnaci 1: By Matrices</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<div class="org-src-container">
+<pre class="src src-c"><span style="color: #fe8019;">#include</span><span style="color: #b8bb26;">&lt;stdio.h&gt;</span>
+
+<span style="color: #d3869b;">int</span> <span style="color: #fabd2f;">fib</span>(<span style="color: #d3869b;">int</span> <span style="color: #83a598;">n</span>)
+{
+  <span style="color: #fb4933;">if</span>(n == 0) <span style="color: #fb4933;">return</span> 0 ;
+  <span style="color: #fb4933;">if</span>(n == 1) <span style="color: #fb4933;">return</span> 1;
+  <span style="color: #d3869b;">int</span> <span style="color: #83a598;">mat</span>[2][2] = {
+    {0, 1},
+    {1, 1}
+}
+
+}
+<span style="color: #d3869b;">int</span> <span style="color: #fabd2f;">main</span>()
+{
+  printf(<span style="color: #b8bb26;">"%d"</span>, fib(40));
+   <span style="color: #fb4933;">return</span> 0;
+}
+</pre>
+</div>
+<p>
+Time: 0m0.002s
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbc3da0" class="outline-2">
+<h2 id="orgbbc3da0"><span class="section-number-2">2</span> Algorithms with numbers</h2>
 <div class="outline-text-2" id="text-2">
 </div>
 </div>
-<div id="outline-container-org93ab495" class="outline-2">
-<h2 id="org93ab495"><span class="section-number-2">3</span> Code</h2>
+<div id="outline-container-orge615edd" class="outline-2">
+<h2 id="orge615edd"><span class="section-number-2">3</span> Code</h2>
 <div class="outline-text-2" id="text-3">
 <div class="org-src-container">
 <pre class="src src-emacs-lisp">(add-to-list 'org-latex-classes
@@ -265,14 +832,6 @@ f =
                (<span style="color: #b8bb26;">"\\section{%s}"</span> . <span style="color: #b8bb26;">"\\section*{%s}"</span>)
                (<span style="color: #b8bb26;">"\\subsection{%s}"</span> . <span style="color: #b8bb26;">"\\subsection*{%s}"</span>)
                (<span style="color: #b8bb26;">"\\subsubsection{%s}"</span> . <span style="color: #b8bb26;">"\\subsubsection*{%s}"</span>)))
-(add-to-list 'org-latex-classes
-          '(<span style="color: #b8bb26;">"koma-article"</span>
-             <span style="color: #b8bb26;">"\\documentclass{scrartcl}"</span>
-             (<span style="color: #b8bb26;">"\\section{%s}"</span> . <span style="color: #b8bb26;">"\\section*{%s}"</span>)
-             (<span style="color: #b8bb26;">"\\subsection{%s}"</span> . <span style="color: #b8bb26;">"\\subsection*{%s}"</span>)
-             (<span style="color: #b8bb26;">"\\subsubsection{%s}"</span> . <span style="color: #b8bb26;">"\\subsubsection*{%s}"</span>)
-             (<span style="color: #b8bb26;">"\\paragraph{%s}"</span> . <span style="color: #b8bb26;">"\\paragraph*{%s}"</span>)
-             (<span style="color: #b8bb26;">"\\subparagraph{%s}"</span> . <span style="color: #b8bb26;">"\\subparagraph*{%s}"</span>)))
 </pre>
 </div>
 </div>
@@ -280,7 +839,7 @@ f =
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Sidharth Arya</p>
-<p class="date">Created: 2018-10-04 Thu 20:43</p>
+<p class="date">Created: 2018-10-05 Fri 20:49</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

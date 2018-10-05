@@ -7,4 +7,6 @@
 This are my solutions to different algorithm books.
 
 #+TOC: headlines
-* Algorithms, Das Gupta Papadimitriou Vazirani
+* Algorithms, Das Gupta Papadimitriou Vazirani 
+** html - https://rawgit.com/sidhartharya10/Algorithms/master/DasGuptaPapadimitriouVazirani.html
+** pdf - https://rawgit.com/sidhartharya10/Algorithms/master/DasGuptaPapadimitriouVazirani.pdf

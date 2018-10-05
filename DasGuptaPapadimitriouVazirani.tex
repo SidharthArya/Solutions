@@ -1,4 +1,4 @@
-% Created 2018-10-04 Thu 20:43
+% Created 2018-10-05 Fri 20:49
 % Intended LaTeX compiler: pdflatex
 \documentclass{book}
 \usepackage[utf8]{inputenc}
@@ -31,21 +31,356 @@
 \setcounter{tocdepth}{0}
 \tableofcontents
 \chapter{Prologue}
-\label{sec:orgf2b83d9}
+\label{sec:org40fc1ea}
 \section{}
-\label{sec:orge029877}
+\label{sec:orgd153eaa}
 \begin{itemize}
-\item f = \(\theta\)(g)
-\item f = O(g)
-\item f = \(\theta\)(g)
-\item f = 
-\mainmatter
+\item f = \(\Theta\)(g)
 \end{itemize}
-\chapter{Okay}
-\label{sec:org8b234ea}
+
+Since \texttt{n-100} and \texttt{n-200} have the same power of n.
+\begin{itemize}
+\item f = O(g)
+\end{itemize}
+
+Since n\(^{\text{1/2}}\) is smaller than n\(^{\text{2/3}}\)
+\begin{itemize}
+\item f = \(\Theta\)(g)
+\end{itemize}
+
+Since \texttt{log n} can always be overcome by \texttt{n} above a particular \texttt{n},  and so can it be less than \texttt{log n} below a particular \texttt{n}. 
+\begin{itemize}
+\item f = \(\Theta\)(g)
+\end{itemize}
+
+Since 
+\begin{EQUATION}
+10n log 10n 
+= 10n(log 10 + log n)
+= 10n log 10 + 10n log n
+= \(\theta\) (nlogn)
+\end{EQUATION}
+\begin{itemize}
+\item f = \(\Theta\)(g)
+\end{itemize}
+
+Since log 2n = log 2 + log n and log 3n = log 3 + log n. which makes log 2 and log 3, just constants.
+\begin{itemize}
+\item f = \(\Theta\) (g)
+\end{itemize}
+
+Since log n\(^{\text{2}}\) = 2log n. and 2 is just a constant that can be dropped.
+\begin{itemize}
+\item f = \(\Omega\)(g)
+\end{itemize}
+
+Since power greater than 0 can always overtake log at some point
+\begin{itemize}
+\item f = \(\Omega\)(g)
+\end{itemize}
+
+On comparing n\(^{\text{2}}\) is greater than n, and log's are not that signifincant in comparison.
+\begin{itemize}
+\item f = \(\Omega\)(g)
+\end{itemize}
+
+Since power greater than 0 can always overtake log at some point
+\begin{itemize}
+\item f = \(\Omega\)(g)
+\end{itemize}
+
+Since (log n)\(^{\text{(log n) -1}}\) is greater than n for some value of n.
+\begin{EQUATION}
+Let us simplify equation for better comparison. We can multiply the equations by log n
+
+Giving
+
+f'(x) = (log n)\(^{\text{(log n) + 1}}\)
+
+g'(x) =  n
+
+I am using ' since equations have been altered and not the same as they initially were, yet they are still comparable.
+
+now applying log
+
+f''(x) = (1+log n) log (log n)
+
+g''(x) = log n
+
+It is clear that it may not be possible to draw a direct relation. But f''(x) can be written as:
+
+f''(x) = (1 + g''(x)) log (g''(x))
+
+Now, if we visualize, log g''(x) will produce 1 at some point and will keep increasing after that value, and at that point it is multiplied by 1+ g''(x) which will clearly compound to something greater than g''(x) itself.
+
+Therefore, at some point f(x) will overtake g(x)
+\end{EQUATION}
+\begin{itemize}
+\item f = \(\Omega\)(g)
+\end{itemize}
+
+Since power greater than 0 can always overtake log at some point
+\begin{itemize}
+\item f = O(g)
+\end{itemize}
+
+\begin{EQUATION}
+5\(^{\text{log}_{\text{2}} \ \text{n}}\) = 5\(^{\text{log}_{\text{2}} \ \text{n x log}_{\text{5}} \ \text{5}}\) = 5\(^{\text{log}_{\text{5}} \ \text{n x log}_{\text{2}} \ \text{5}}\) = (5\(^{\text{log}_{\text{5}} \ \text{n}}\))\(^{\text{log}_{\text{2}} \ \text{5}}\) = n\(^{\text{log}_{\text{2}} \ \text{5}}\) \(\approx\) n\(^{\text{2.something}}\)
+\end{EQUATION}
+
+Therefore, at some n g will overcome f, by comparison of powers.
+\begin{itemize}
+\item f = \(\Omega\)(g)
+\end{itemize}
+
+Since n2\(^{\text{n}}\) will produce a greater value for n than 3\(^{\text{n}}\) at some point.
+\begin{itemize}
+\item f = \(\Theta\)(g)
+\end{itemize}
+
+Since the two differ by a constant multiplicative factor, i.e. 2.
+\begin{itemize}
+\item f = \(\Theta\)(g)
+\end{itemize}
+
+\begin{EQUATION}
+Expansion of n!
+
+n! = n(n-1)(n-2)..1
+
+Notice that largest possible power of n will be n. if we count unity as (n-something)
+
+Therefore n! can be dependent on n\(^{\text{n}}\)
+
+and so n\(^{\text{n}}\) at some point will definetely overcome 2\(^{\text{n}}\).
+
+n! grows atleast as fast as 2\(^{\text{n}}\), maybe more, but our concern is satisfied.
+\end{EQUATION}
+\begin{itemize}
+\item f=O(g)
+\end{itemize}
+\begin{EQUATION}
+Taking log on both equations, and comparing
+
+f'(x) = log n x log(log n)
+
+g'(x) = (log\(_{\text{2}}\) n)\(^{\text{2}}\) x log 2 = log 2 x (log\(_{\text{2}}\) e)\(^{\text{2}}\) x log n x log n
+
+Comparing the n-dependent terms, log n is certainly greater than log(log n). Therefore, g'(x) will be greater than f'(x) at some point.
+\end{EQUATION}
+\section{}
+\label{sec:org52e78ab}
+g(n) = 1 + c + c\(^{\text{2}}\) \ldots{} + c\(^{\text{n}}\)
+\begin{itemize}
+\item if c < 1
+\end{itemize}
+
+The series will be decreasing. so the maximum number will be 1. Therefore, g(n) be independent of n, on approximation, implying g(n) = \(\Theta\)(1).
+\begin{itemize}
+\item if c = 1
+\end{itemize}
+
+g(n) = 1 + 1 +1 +\ldots{} + 1 = n
+
+Therefore, g(n) = \(\Theta\)(n)
+\begin{itemize}
+\item if c> 1
+\end{itemize}
+
+g(n) will be increasing. The largest term will be c\(^{\text{n}}\)
+
+Therefore, g(n) = \(\Theta\)(c\(^{\text{n}}\))
+\section{}
+\label{sec:orge1c73ef}
+\begin{itemize}
+\item 
+\end{itemize}
+\begin{EQUATION}
+F\(_{\text{n}}\) \(\ge\) 2\(^{\text{0.5n}}\) for n \(\ge\) 6
+
+\textbf{Induction}
+
+Case : n = 6 (Base Case)
+
+F\(_{\text{0}}\) = 0, F\(_{\text{1}}\) = 1 , F\(_{\text{2}}\) = 1, F\(_{\text{3}}\) = 2, F\(_{\text{4}}\) = 3, F\(_{\text{5}}\) = 5
+
+L.H.S : F\(_{\text{6}}\) = F\(_{\text{5}}\) + F\(_{\text{4}}\) = 8
+
+R.H.S : 2\(^{\text{0.5 x 6}}\) = 8
+
+Since L.H.S = R.H.S
+
+This case is true.
+
+Let it be true, for n = k.
+
+F\(_{\text{k}}\) = F\(_{\text{k-1}}\)+ F\(_{\text{k-2}}\) \(\ge\) 2\(^{\text{0.5 x k}}\)
+
+Case: n = k+1
+
+F\(_{\text{k+1}}\) = F\(_{\text{k}}\) + F\(_{\text{k-1}}\) \(\ge\) 2\(^{\text{0.5 x k}}\) + 2\(^{\text{0.5 x k-1}}\)  = 2\(^{\text{0.5 k}}\) (1+2\(^{\text{-0.5}}\)) 
+
+It can easily be shown that 1+ 2\(^{\text{-0.5}}\) > 2\(^{\text{0.5}}\)
+
+Subsituting that instead
+F\(_{\text{k+1}}\) \(\ge\) 2\(^{\text{0.5(k+1)}}\)
+\end{EQUATION}
+\begin{itemize}
+\item 
+\end{itemize}
+\begin{EQUATION}
+We need to solve for c such that:
+
+F\(_{\text{n}}\) \(\le\) 2\(^{\text{cm}}\) \(\forall\) n \(\ge\) 6
+
+\(\Rightarrow\) F\(_{\text{n-1}}\) + F\(_{\text{n-2}}\) \(\le\) 2\(^{\text{cn}}\)
+
+\(\Rightarrow\) 2\(^{\text{c(n-1)}}\) + 2\(^{\text{c(n-2)}}\) \(\le\) 2\(^{\text{cn}}\)
+
+\(\Rightarrow\) 2\(^{\text{c(n-2)}}\) (2\(^{\text{c}}\) + 1) \(\le\) 2\(^{\text{cn}}\)
+
+\(\Rightarrow\) 2\(^{\text{c}}\) +1  \(\le\) 2\(^{\text{2c}}\)
+
+Let 2\(^{\text{c}}\) =x
+
+\(\Rightarrow\) x +1 \(\le\) x\(^{\text{2}}\)
+
+\(\Rightarrow\) x\(^{\text{2}}\) - x - 1 \(\ge\) 0
+
+2\(^{\text{c}}\) \(\ge\) \(\frac{1 \pm \sqrt{5}}{2}\) 
+
+Taking log
+
+\(\Rightarrow\) c  \(\ge\) log\(_{\text{2}}\) (1 \textpm{} \(\sqrt{5}\)) - 1
+
+c \(\approx\) 1.694
+\end{EQUATION}
+
+\begin{itemize}
+\item 
+\end{itemize}
+From previous example . c = 1.694
+
+\section{}
+\label{sec:org02b0c0b}
+\begin{itemize}
+\item Basic Matrix multiplication
+\item If we attribute all multiplicative and additive operations as O(1), then,
+If we have to compute fibonnacci of, say 9.
+We already know the value of matrix X. So to find value of fibonnacci 9, we need to know X\(^{\text{9}}\), which can be written as X\(^{\text{8}}\) x X. Since we already know the value of X. All we have to do is compute X\(^{\text{2}}\) = X x X and X\(^{\text{4}}\) = X*2 x X\(^{\text{2}}\) and X\(^{\text{8}}\) = X\(^{\text{4}}\) x X\(^{\text{4}}\), which gives us a total of 3 matrix multiplication operations. for n = 9.
+\end{itemize}
+And for n = 8 it would be the same. Since log 8 is 3, so there are 3 matrix multiplication. which concludes the answer.
+\begin{itemize}
+\item It's an obvious statement, since even the final answer will not be n bits long.
+\end{itemize}
+let's say we start with 0, 1, 1. The third fibonnacci number in binary will be 10.  compare them with n= 0, 1,2,3. Just for sake of argument let's use induction.
+\begin{EQUATION}
+\textbf{Induction}
+
+for n = 1 (Base Case)
+
+F\(_{\text{1}}\) = 1
+
+also in binary only one bit is needed. Base Case is satisfied.
+
+let's assume it to be true for n=k
+
+then 
+
+F\(_{\text{k+1}}\) = F\(_{\text{k}}\) + F\(_{\text{k-1}}\)
+
+We know that binary F\(_{\text{k}}\) = O(k) and binary F\(_{\text{k-1}}\) = O(k-1)
+
+It is already known that the maximum of n digit number on addition with itself will have n+1 digits.
+
+e.g
+
+1111111 + 1111111 = 11111110
+
+Therefore k-digit binary number + k-1 digit binary number cannot produce more digits than k+1\ldots{}
+
+Hence the statement is true for all fibonnacci numbers.
+\end{EQUATION}
+\begin{itemize}
+\item Since log n matrix multiplications are required, each compounding to 8 matrix multiplications. Running time will be nearly O(8M(n) log n) = O(M(n) log n)
+\item Basically as we raise the power of the matrices, the length increases (doubles). Therefore
+\end{itemize}
+M(1) + M(2) + M(4)\ldots{} + M(n-1) = O(M(n))
+Since the terms have some dependence on n (e.g. M(n-1)). 
+
+\section{Extra}
+\label{sec:org5bd58eb}
+
+
+\subsection{Fibonnaci 1: By Recursion}
+\label{sec:org6e3611d}
+\begin{verbatim}
+#include<stdio.h>
+
+int fib(int n)
+{
+  if(n == 0) return 0 ;
+  if(n == 1) return 1;
+  else return fib(n-1) + fib(n-2);  
+}
+int main()
+{
+  printf("%d", fib(40));
+   return 0;
+}
+\end{verbatim}
+Time: 0m1.143s
+Note: if you have a linux machine, you can check the time on your machine by \texttt{time output-file}. but the time will be different on your machine.
+\subsection{Fibonnaci 1: By Loop}
+\label{sec:org195080d}
+\begin{verbatim}
+#include<stdio.h>
+
+int fib(int n)
+{
+  if(n == 0) return 0 ;
+  if(n == 1) return 1;
+  int Arr[n];
+  Arr[0] = 0; Arr[1] = 1;
+  for(int i = 2 ; i < n; i++)
+    Arr[i] = Arr[i-1] + Arr[i-2];
+  return Arr[n-1] + Arr[n-2];
+}
+int main()
+{
+  printf("%d", fib(40));
+   return 0;
+}
+\end{verbatim}
+Time: 0m0.002s
+\subsection{Fibonnaci 1: By Matrices}
+\label{sec:org2bfd395}
+\begin{verbatim}
+#include<stdio.h>
+
+int fib(int n)
+{
+  if(n == 0) return 0 ;
+  if(n == 1) return 1;
+  int mat[2][2] = {
+    {0, 1},
+    {1, 1}
+}
+
+}
+int main()
+{
+  printf("%d", fib(40));
+   return 0;
+}
+\end{verbatim}
+Time: 0m0.002s
+\mainmatter
+\chapter{Algorithms with numbers}
+\label{sec:org9cdd780}
 \backmatter
 \chapter{Code}
-\label{sec:orgdc99317}
+\label{sec:org95fba04}
 \begin{verbatim}
 (add-to-list 'org-latex-classes
              '("some"
@@ -54,13 +389,5 @@
                ("\\section{%s}" . "\\section*{%s}")
                ("\\subsection{%s}" . "\\subsection*{%s}")
                ("\\subsubsection{%s}" . "\\subsubsection*{%s}")))
-(add-to-list 'org-latex-classes
-          '("koma-article"
-             "\\documentclass{scrartcl}"
-             ("\\section{%s}" . "\\section*{%s}")
-             ("\\subsection{%s}" . "\\subsection*{%s}")
-             ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-             ("\\paragraph{%s}" . "\\paragraph*{%s}")
-             ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 \end{verbatim}
 \end{document}
