@@ -3,9 +3,9 @@
 #+DESCRIPTION: This are my solutions to different algorithm books.#+TOC: nil
 #+OPTIONS: toc:nil
 # Algorithms Solutions
-* Algorithms Solutions
+Algorithms Solutions 
 This are my solutions to different algorithm books.
-
+#+TOC: headlines
 * Algorithms, Das Gupta Papadimitriou Vazirani 
 1. html - https://rawgit.com/sidhartharya10/Solutions/master/DasGuptaPapadimitriouVazirani.html
 2. pdf - https://rawgit.com/sidhartharya10/Solutions/master/DasGuptaPapadimitriouVazirani.pdf

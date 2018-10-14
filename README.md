@@ -1,9 +1,13 @@
-
-
-# Algorithms Solutions
-
+# Algorithms Solutions 
 This are my solutions to different algorithm books.
 
+
+# Table of Contents
+
+1.  [Algorithms, Das Gupta Papadimitriou Vazirani](#orga372518)
+
+
+<a id="orga372518"></a>
 
 # Algorithms, Das Gupta Papadimitriou Vazirani
 
